@@ -29,17 +29,20 @@ const Chat = () => {
     socket.emit('joined', { user });
 
     socket.on('welcome', (data) => {
-      setMessages([...messages, data]);
+      // setMessages([...messages, data]);
+      setMessages((prevMessages) => [...prevMessages, data]);
       console.log(data.user, data.message);
     });
 
     socket.on('userJoined', (data) => {
-      setMessages([...messages, data]);
+      // setMessages([...messages, data]);
+      setMessages((prevMessages) => [...prevMessages, data]);
       console.log(data.user, data.message);
     });
 
     socket.on('leave', (data) => {
-      setMessages([...messages, data]);
+      // setMessages([...messages, data]);
+      setMessages((prevMessages) => [...prevMessages, data]);
       console.log(data.user, data.message);
     });
 
