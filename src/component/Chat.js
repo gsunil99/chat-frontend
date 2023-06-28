@@ -51,13 +51,14 @@ const Chat = () => {
 
   useEffect(() => {
     socket.on('sendMessage', (data) => {
-      setMessages([...messages, data]);
+      setMessages((prevMessages) => [...prevMessages, data]);
       console.log(data.user, data.message, data.id);
     });
+
     return () => {
-      socket.off();
+      socket.off('sendMessage');
     };
-  }, [messages]);
+  }, []); // Empty dependency array since we don't want the effect to re-run
 
   return (
     <div className="chatPage">
