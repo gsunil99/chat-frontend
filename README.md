@@ -29,7 +29,7 @@ Download the backend code mentioned above and continue with below process
 
 ### Installation
 
-1.  Clone the repository: `git clone https://github.com/your-username/realtime-chat-app.git`
+1.  Clone the repository: `git clone https://github.com/gsunil99/chat-frontend`
 2.  Navigate to the project directory: `cd realtime-chat-app`
 3.  Install dependencies: `npm install`
 
